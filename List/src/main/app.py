@@ -10,6 +10,7 @@ def main():
 
     # Access the element at the given index 
     
+    
     my_list=[1,2,3,4,5,6,7,8,9,10]
     print("The sample list:",my_list)
     index = int(input("Enter the index of the element to access from this my_list: "))
