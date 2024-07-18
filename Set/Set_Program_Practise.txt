@@ -1,0 +1,70 @@
+Question 1 : Fetch the similar items from two sets.
+Given Sets:
+
+set1 = {10,20,30,40,50}
+set2 = {20,30,50,60,70}
+
+Expected Output:
+
+{50, 20, 30}
+
+
+Question 2 : Fetch the Unique items from two sets.
+Given Sets:
+
+set1 = {10,20}
+set2 = {20,30}
+
+Expected Output:
+
+{10, 20, 30}
+
+Question 3 : Update the set1 with the items that are unique to set1 only (means that do not exist in set2).
+Given Sets:
+
+set1 = {10,20,40}
+set2 = {20,30,50}
+
+Expected Output:
+
+{40, 10}
+
+Question 4 : Fetch the uncommon elements from set1 and set2.
+Given Sets:
+
+set1 = {10, 20, 30, 40}
+set2 = {20, 30, 40, 50}
+
+Expected Output:
+
+{10, 50}
+
+
+Question 5 : How to check if there are any common elements in two sets. If yes, print them.
+Given Sets:
+
+set1 = {10, 20, 30, 40}
+set2 = {20, 30, 40, 50}
+
+Expected Output:
+
+Here is the list of common elements:
+{40, 20, 30}
+
+
+Question 6 : From the given set of names, separate the names that start with j and t and create two new sets.
+Given Set:
+
+names = {"Jack", "John", "Tim", "Thomas", "Jim", "Tom" }
+
+Expected Output:
+
+{'Jim', 'John', 'Jack'}
+{'Tim', 'Thomas', 'Tom'
+
+
+Question 7 : In Python, which operator is used to determine that if a set is the subset of another set?
+
+Question 8 : Create an empty “names” set and then add 4 names, rename 1 of them and then remove 2 names from the set.
+
+Question 9 : Create a set of 10 random integers between 10 and 40. Now print the count of numbers less than 20 and remove numbers > 30 from the set.
