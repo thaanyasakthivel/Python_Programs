@@ -3,6 +3,9 @@ Given Sets:
 
 set1 = {10,20,30,40,50}
 set2 = {20,30,50,60,70}
+set3= set1.intersection(set2)
+print(set3)
+
 
 Expected Output:
 
@@ -14,6 +17,9 @@ Given Sets:
 
 set1 = {10,20}
 set2 = {20,30}
+set1.update(set2)
+print(set1)
+
 
 Expected Output:
 
@@ -24,6 +30,8 @@ Given Sets:
 
 set1 = {10,20,40}
 set2 = {20,30,50}
+set1.difference_update(set2)
+print(set1)
 
 Expected Output:
 
@@ -34,6 +42,9 @@ Given Sets:
 
 set1 = {10, 20, 30, 40}
 set2 = {20, 30, 40, 50}
+uncommon_elements=set1^set2
+print(uncommon_elements)
+
 
 Expected Output:
 
@@ -45,6 +56,8 @@ Given Sets:
 
 set1 = {10, 20, 30, 40}
 set2 = {20, 30, 40, 50}
+set3=set1.intersection(set2)
+print(set3)
 
 Expected Output:
 
@@ -55,7 +68,11 @@ Here is the list of common elements:
 Question 6 : From the given set of names, separate the names that start with j and t and create two new sets.
 Given Set:
 
-names = {"Jack", "John", "Tim", "Thomas", "Jim", "Tom" }
+names={"Jack", "John", "Tim", "Thomas", "Jim", "Tom"}
+names_starting_with_j={name for name in names if name.lower().startswith('j')}
+names_starting_with_t={name for name in names if name.lower().startswith('t')}
+print("Names starting with 'j':",names_starting_with_j)  
+print("Names starting with 't':",names_starting_with_t)  
 
 Expected Output:
 
@@ -64,7 +81,29 @@ Expected Output:
 
 
 Question 7 : In Python, which operator is used to determine that if a set is the subset of another set?
+We use '<=' to check if the given set is the subset of another give set
 
 Question 8 : Create an empty “names” set and then add 4 names, rename 1 of them and then remove 2 names from the set.
 
+names = set()
+names.update(["Thaanya", "Internship", "Workfella", "Revanture"])
+
+if "Ajay" in names:
+    names.remove("Thaanya")
+    names.add("Ajay")
+    names.remove("Workfella")
+    names.remove("Revanture")
+print(names) 
+
+
 Question 9 : Create a set of 10 random integers between 10 and 40. Now print the count of numbers less than 20 and remove numbers > 30 from the set.
+
+import random
+random_numbers={random.randint(10, 40)
+for _ in range(10)}
+print("Original set:",random_numbers)
+num_of_elements_less_than_20=sum(1 for number in random_numbers if number<20)
+print("Count of numbers less than 20:", num_of_elements_less_than_20)
+num_to_remove={number for number in random_numbers if number>30}
+random_numbers.difference_update(num_to_remove)
+print("After removing numbers greater than 30:",random_numbers)
