@@ -1,36 +1,139 @@
 1. Check if a Given Key Already Exists in Dictionary
 Let’s begin with a simple question. If you have learned about Python dictionaries, you will know that you can check if a given key exists or not in multiple ways. Here’s one of them. 
-
+  i)in
+  ii)get
+  iii)keys
+the above methods can be used
 
 2. Handle Missing Keys in Dictionary
 Dictionary is a collection in python, where the data is stored in the form of a key-value pair, that is, it maps key to its value. Often, you will not know all the keys present in the dictionary and you might end up with a typing error which may lead to runtime error due to missing keys in the dictionary. So, how to deal with such situations?
 
+The get method allows you to provide a default value if the key does not exist. This prevents a KeyError.
+
 3. Extract Unique Values in a Given Dictionary
 In a dictionary, the keys have to be unique, whereas the values can be duplicated. So, given a dictionary as shown below, how can you print all the unique values it has?
- 
+
+We can print the unique values by
+  i)Using a set to collect unique values
+  ii)Using a loop and set
+ iii)Using a list comprehension with set
+
 4. Print the Sum of Key Value Pairs in a Given Dictionary
 You need to create a list which has the sum of key-value pairs of a given dictionary. This can be done using a for loop and append() function. 
+
+To print the sum of key-value pairs in a given dictionary, you can use a for loop to iterate through the dictionary items and compute the sum for each key-value pair.
+my_dict = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+sum_list = []
+for key, value in my_dict.items():
+    sum_list.append(ord(key) + value)  # ord(key) converts the key to its ASCII value
+
+print(sum_list)
 
 5. Replace Dictionary Values From Other Dictionary
 Let’s say you are given two dictionaries. You need to write a python program that will replace the values in the first dictionary with the values from the second dictionary if the key is present in the second dictionary. 
 
 You can do this using dictionary comprehension or using loops. Here’s how you can do by using loops
+
+dict1 = {'a': 1, 'b': 2, 'c': 3}
+dict2 = {'b': 20, 'c': 30, 'd': 40}
+
+for key in dict1:
+    if key in dict2:
+        dict1[key] = dict2[key]
+
+print(dict1)  # Output: {'a': 1, 'b': 20, 'c': 30}
+
 5. Update or Change the Keys in a Given Dictionary
 .You can do this in multiple ways as mentioned below:
 
 Using assignment operator
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+
+my_dict['alpha'] = my_dict['a']
+del my_dict['a']
+
+print(my_dict)  
+Output: {'b': 2, 'c': 3, 'alpha': 1}
+
 Using pop() method
+
+
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+
+
+my_dict['beta'] = my_dict.pop('b')
+
+print(my_dict)  Ou
+output: {'a': 1, 'c': 3, 'beta': 2}
+
+
 Using zip() method
+
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+
+
+old_keys = ['a', 'b', 'c']
+new_keys = ['alpha', 'beta', 'gamma']
+
+new_dict = {new_key: my_dict[old_key] for old_key, new_key in zip(old_keys, new_keys)}
+
+print(new_dict)  
+Output: {'alpha': 1, 'beta': 2, 'gamma': 3}
+
 
 6. Count the Frequency of List Items Using a Dictionary
 You can solve this in many ways. Any ideas? Well, you can just use looping constructs or use the list() count method or you can start with an empty dictionary and use the dict.get() method. Probably many other ways!
 
+
+my_list = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple']
+
+frequency_dict = {}
+
+
+for item in my_list:
+    if item in frequency_dict:
+        frequency_dict[item] += 1
+    else:
+        frequency_dict[item] = 1
+
+print(frequency_dict) 
+Output: {'apple': 3, 'banana': 2, 'orange': 1}
+
 7. Change the Value of a Key in Nested Dictionary
 Given a nested dictionary, you need to write a program demonstrating how to change the value associated with a particular key of that dictionary. 
+
+nested_dict = {
+    'key1': {
+        'subkey1': 1,
+        'subkey2': 2
+    },
+    'key2': {
+        'subkey1': 10,
+        'subkey2': 20
+    }
+}
+
+
+nested_dict['key2']['subkey1'] = 100
+
+print(nested_dict)
+
 
 8. Get Keys with Maximum and Minimum Value in a Dictionary
 We are going to use max(n1, n2, n3, …[, key=func]) and min(n1, n2, n3, …[, key=func]) functions and assign a lambda function to the ‘key’ parameter to check for max and min values.
 
+my_dict = {'a': 10, 'b': 2, 'c': 5, 'd': 15}
+
+max_key = max(my_dict, key=lambda k: my_dict[k])
+print(f"Key with maximum value: {max_key}, Value: {my_dict[max_key]}")
+
+min_key = min(my_dict, key=lambda k: my_dict[k])
+print(f"Key with minimum value: {min_key}, Value: {my_dict[min_key]}")
+
 9. Check if the Substring Matches Any Key in a Dictionary
 Often you might just know a specific part of the key and using this you have to fetch the associated value. So, you need to check if there exists any key which has the substring that you are searching for. If yes, then print the values associated with those keys. This can be achieved in multiple ways. 
 
+Using a Loop: Iterate through the dictionary keys and check if the substring is present.
+Using List Comprehension: Use list comprehension to find matching keys and their values.
+Using a Function: Create a function to find and return matching keys and values.
+Using Filter and Lambda: Use the filter function with a lambda to find matching keys.
