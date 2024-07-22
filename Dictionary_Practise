@@ -1,0 +1,36 @@
+1. Check if a Given Key Already Exists in Dictionary
+Let’s begin with a simple question. If you have learned about Python dictionaries, you will know that you can check if a given key exists or not in multiple ways. Here’s one of them. 
+
+
+2. Handle Missing Keys in Dictionary
+Dictionary is a collection in python, where the data is stored in the form of a key-value pair, that is, it maps key to its value. Often, you will not know all the keys present in the dictionary and you might end up with a typing error which may lead to runtime error due to missing keys in the dictionary. So, how to deal with such situations?
+
+3. Extract Unique Values in a Given Dictionary
+In a dictionary, the keys have to be unique, whereas the values can be duplicated. So, given a dictionary as shown below, how can you print all the unique values it has?
+ 
+4. Print the Sum of Key Value Pairs in a Given Dictionary
+You need to create a list which has the sum of key-value pairs of a given dictionary. This can be done using a for loop and append() function. 
+
+5. Replace Dictionary Values From Other Dictionary
+Let’s say you are given two dictionaries. You need to write a python program that will replace the values in the first dictionary with the values from the second dictionary if the key is present in the second dictionary. 
+
+You can do this using dictionary comprehension or using loops. Here’s how you can do by using loops
+5. Update or Change the Keys in a Given Dictionary
+.You can do this in multiple ways as mentioned below:
+
+Using assignment operator
+Using pop() method
+Using zip() method
+
+6. Count the Frequency of List Items Using a Dictionary
+You can solve this in many ways. Any ideas? Well, you can just use looping constructs or use the list() count method or you can start with an empty dictionary and use the dict.get() method. Probably many other ways!
+
+7. Change the Value of a Key in Nested Dictionary
+Given a nested dictionary, you need to write a program demonstrating how to change the value associated with a particular key of that dictionary. 
+
+8. Get Keys with Maximum and Minimum Value in a Dictionary
+We are going to use max(n1, n2, n3, …[, key=func]) and min(n1, n2, n3, …[, key=func]) functions and assign a lambda function to the ‘key’ parameter to check for max and min values.
+
+9. Check if the Substring Matches Any Key in a Dictionary
+Often you might just know a specific part of the key and using this you have to fetch the associated value. So, you need to check if there exists any key which has the substring that you are searching for. If yes, then print the values associated with those keys. This can be achieved in multiple ways. 
+
